@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="footwear.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LANDING PG</title>
+</head>
+
+<body>
+  <section>
+    <div class="cardog">
+      <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="footwear.html">FOOTWEAR </a></li>
+        <li><a href="bags.html">BAGS </a></li>
+        <li><a href="sport.html">SPORTS EQUIPMENT </a></li>
+        <li><a href="clothing.html">CLOTHING </a></li>
+      </ul>
+    </div>
+
+    <div class="sec1" id="footwear">
+        <div class="card"><img src="nike7.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike2.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike3.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike4.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike5.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike6.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nikejordan.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike1.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike7.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike8.jpeg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike9.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike10.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card"><img src="nike11.jpg"><a href="#"><li>Nike AirJordans<br> Rs. 80,000</li></div></a>
+        <div class="card1"><a href="#footwear">&#8593 BACK TO TOP &#8593</div>
+      </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+          const navbar = document.querySelector('.navbar');
+          navbar.classList.toggle('active');
+        }
+    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(fuction(){
+                $(window).scroll(function(){
+                    if ($(this).scrolltop()>550){
+                        $('.navbar').addClass('solid');
+                        $('back-to-top').addClass('visible');
+                    }
+                    else{
+                        $('.navbar').removeClass('solid');
+                        $('.back-to-top').removeClass('visible');
+                    }
+                    
+                })
+            });
+        </script>
+        <script>
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        }
+    });
+</script>
+    </body>
+    
+    </html>

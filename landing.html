@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="landing.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LANDING PG</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+  <section>
+    <div class="cardog" id="home">
+      <ul>
+        <li><a href="footwear.html">FOOTWEAR </a></li>
+        <li><a href="bags.html">BAGS </a></li>
+        <li><a href="sport.html">SPORTS EQUIPMENT </a></li>
+        <li><a href="clothing.html">CLOTHING </a></li>
+      </ul>
+    </div>
+    <div class="cardog1">
+      <ul>
+        <li>NIKE Just Do It</li>
+      </ul>
+    </div>
+    <p class="txt">TRENDING</p>
+    <div class="sec1">
+      <div class="card"><img src="footballs.jpg"><a href="#">
+          <li>Football's Pack of 3<br> Rs. 8,000</li>
+      </div></a>
+      <div class="card"><img src="nike8.jpeg"><a href="#">
+          <li>Nike Air Jordans<br> Rs. 80,000</li>
+      </div></a>
+      <div class="card"><img src="nike6.jpg"><a href="#">
+          <li>Nike Air Running<br> Rs. 20,000</li>
+      </div></a>
+    </div>
+    <p class="txt">TOP PICK'S FOR YOU</p>
+    <div class="sec1">
+      <div class="card"><img src="cap.jpg"><a href="#">
+          <li>toppi<br> Rs. 800</li>
+      </div></a>
+      <div class="card"><img src="nike5.jpg"><a href="#">
+          <li>Nike Air Force 1<br> Rs. 50,000</li>
+      </div></a>
+      <div class="card"><img src="basket.jpg"><a href="#">
+          <li>Basket court vision Ball<br> Rs. 80,000</li>
+      </div></a>
+    </div>
+    <p class="txt">FRESH IN</p>
+    <div class="sec1">
+      <div class="card"><img src="nikejordan.jpg"><a href="#">
+          <li>Nike AirJordans<br> Rs. 80,000</li>
+      </div></a>
+      <div class="card"><img src="nike1.jpg"><a href="#">
+          <li>Nike AirJordans<br> Rs. 80,000</li>
+      </div></a>
+      <div class="card"><img src="nike1.jpg"><a href="#">
+          <li>Nike AirJordans<br> Rs. 80,000</li>
+      </div></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="about" id="about">
+      <center><h1>ABOUT</h1></center><br>
+      <p>At NIKE, we are more than just an e-commerce platform. We are a passionate team of
+        individuals dedicated to providing you with an unparalleled shopping experience. Our journey began with a simple
+        vision: to offer a curated selection of high-quality products that cater to your unique tastes and needs.</p>
+
+    </div>
+    </section>
+    <section>
+      <div class="services" id="services">
+        <div class="txt1">
+        <h1>Services</h1><br>
+        <ul>
+          <li>Order Status<br></li>
+          <li>Delivery<br></li>
+          <li>Returns<br></li>
+          <li>Payment Options</ul></div>
+
+        <div class="txt2" id="contact"> 
+          <h1>Contact Us</h1><br>
+          <p>
+            <ul class="wrapper">
+              <li class="icon facebook"><a href="https://www.facebook.com/"><img src="fblog.png"></a>
+                <span class="tooltip"><a href="">Facebook</a></span>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </li>
+              <li class="icon instagram"><a href="#"><img src="istg-icon.png"></a>
+                <span class="tooltip">Instagram</a></span>
+                <span><i class="fab fa-instagram"></i></span>
+              <li class="icon youtube"><a href="https://mail.google.com/mail/"><img src="gmaillog.png"></a>
+                <span class="tooltip"><a href="">Gmail</a></span>
+                <span><i class="fab fa-youtube"></i></span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <script>
+      function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+      }
+  </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+          $(document).ready(fuction(){
+              $(window).scroll(function(){
+                  if ($(this).scrolltop()>550){
+                      $('.navbar').addClass('solid');
+                      $('back-to-top').addClass('visible');
+                  }
+                  else{
+                      $('.navbar').removeClass('solid');
+                      $('.back-to-top').removeClass('visible');
+                  }
+                  
+              })
+          });
+      </script>
+      <script>
+          $("a").on('click', function (event) {
+              if (this.hash !== "") {
+                  event.preventDefault();
+                  var hash = this.hash;
+                  $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          window.location.hash = hash;
+        });
+      }
+  });</script>
+</body>
+
+</html>
