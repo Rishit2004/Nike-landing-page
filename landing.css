@@ -289,6 +289,13 @@ a {
   box-shadow: 0px 0px 100px #d0d1bec9;
 }
 
+footer{
+  margin-left: 9.5%;
+  background-color: black;
+  color: white;
+  padding: 2%;
+}
+
 @media screen and (max-width: 650px) {
 
   .menu-toggle {
